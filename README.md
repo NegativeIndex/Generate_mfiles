@@ -10,7 +10,7 @@ Frequently, I need maintain several similar m-files. In the example, I need plot
 I also want the flexibility. So I want all the m-files are generated and saved on the disk, so that I can edit them separated if necessary. Actually, I introduce several makeup tags so that the additional edit on the generated file won't be overwritten. 
 
 ## Instruction
-The function is names as *generate_mfile*.
+The function is named as *generate_mfile*.
 ```
 generate_mfile(fname1,fname2,re_pairs)
     fname1: the source m-file    
