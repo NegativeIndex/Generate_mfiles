@@ -13,4 +13,8 @@ I also want the flexibility. So I want all the m-files are generated and saved o
 
 ```
 generate_mfile(fname1,fname2,re_pair)
+
+    fname1: the source m-file
+    
+    fname2: the destination m-file
 ```
