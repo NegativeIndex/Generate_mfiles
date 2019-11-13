@@ -12,9 +12,14 @@ I also want the flexibility. So I want all the m-files are generated and saved o
 ## Instruction
 
 ```
-generate_mfile(fname1,fname2,re_pair)
-
-    fname1: the source m-file
-    
+generate_mfile(fname1,fname2,re_pairs)
+    fname1: the source m-file    
     fname2: the destination m-file
+	re_pairs: reguar expression pairs for replacement
 ```
+To make things simple, I assume the source file and the destination file have the same number of lines. There are one-to-one correspondence between the two files. If the source file has one line which should not appear in the destiniation file, replace the line with a blank line in the *re_pairs*. If the destination file has an additional line, add a blank line in the source file and use *%copynew* to protect the line. See below for tags.
+### tags
+
+*%copynew* and *%copyold%*:  they are placed at the end of a line, so that the line will be identical to the destination file (if it exists) or the source file. 
+
+*%copynew_begin*, *%copynew_end*, *%copyold_begin%* and *%copyold_end%*: They are place in a standalong line. The lines between the begin-end pairs will be identical to the denstination or the source file and won't change corresponding to *re_pairs*. 
